@@ -1,13 +1,13 @@
+// truffle suite adds chai expect and assert to global...
 /// <reference types="chai" />
 /// <reference types="mocha" />
 declare const assert: Chai.AssertStatic;
 declare const expect: Chai.ExpectStatic;
 
+// and 'contract' function like describe
 declare function contract(name: string, test: (accounts: Truffle.Accounts) => void): void;
 
 declare namespace Truffle {
-  // truffle suite adds chai expect and assert to global
-
   type Accounts = string[];
 
   interface TransactionDetails {
