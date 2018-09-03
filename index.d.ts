@@ -1,12 +1,18 @@
-// truffle suite adds chai expect and assert to global...
+/**
+ * Globals
+ */
 /// <reference types="chai" />
 /// <reference types="mocha" />
 declare const assert: Chai.AssertStatic;
 declare const expect: Chai.ExpectStatic;
 
-// and 'contract' function like describe
 declare function contract(name: string, test: (accounts: Truffle.Accounts) => void): void;
 
+declare const artifacts: Truffle.Artifacts;
+
+/**
+ * Namespace
+ */
 declare namespace Truffle {
   type Accounts = string[];
 
@@ -28,4 +34,9 @@ declare namespace Truffle {
   }
 
   type Migration = (deploy: Deployer, network: string, accounts: Accounts) => void;
+
+  // Wanna exact typings for your smartcontracts? Use typechain
+  interface Artifacts {
+    require<T = any>(name: string): T;
+  }
 }
