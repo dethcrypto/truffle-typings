@@ -1,6 +1,6 @@
 {
   "name": "truffle-typings",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "git@github.com:ethereum-ts/truffle-typings.git",
   "author": "Krzysztof Kaczor <chris@kaczor.io>",
   "license": "MIT",
