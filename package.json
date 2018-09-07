@@ -1,5 +1,13 @@
 {
   "name": "truffle-typings",
+  "description": "Typescript typings for Truffle",
+  "keywords": [
+    "truffle",
+    "typings",
+    "typescript",
+    "ethereum",
+    "smartcontract"
+  ],
   "version": "1.0.2",
   "repository": "git@github.com:ethereum-ts/truffle-typings.git",
   "author": "Krzysztof Kaczor <chris@kaczor.io>",
