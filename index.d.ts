@@ -10,6 +10,8 @@ declare function contract(name: string, test: (accounts: Truffle.Accounts) => vo
 
 declare const artifacts: Truffle.Artifacts;
 
+declare const web3: any;
+
 /**
  * Namespace
  */
