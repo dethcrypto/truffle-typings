@@ -50,7 +50,6 @@ declare namespace Truffle {
 
   interface ContractInstance {
     address: string;
-    contractName: string;
   }
 
   interface ContractNew<ARGs extends any[]> {
