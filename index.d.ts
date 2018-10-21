@@ -18,9 +18,9 @@ declare namespace Truffle {
 
   interface TransactionDetails {
     from: string;
-    gas: number | string;
-    gasPrice: number | string;
-    value: number | string;
+    gas?: number | string;
+    gasPrice?: number | string;
+    value?: number | string;
   }
 
   export interface TransactionLog {
