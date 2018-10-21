@@ -18,11 +18,39 @@ declare namespace Truffle {
 
   interface TransactionDetails {
     from: string;
+    gas: number | string;
+    gasPrice: number | string;
+    value: number | string;
   }
 
-  interface Contract<T> {
+  export interface TransactionLog {
+    address: string;
+    args: any;
+    blockHash: string;
+    blockNumber: number;
+    event: string;
+    logIndex: number;
+    transactionHash: string;
+    transactionIndex: number;
+    type: string;
+  }
+
+  export interface TransactionResponse {
+    tx: string;
+    receipt: any;
+    logs: TransactionLog[];
+  }
+
+  interface Contract<T> extends ContractNew<any[]> {
     deployed(): Promise<T>;
     at(address: string): T;
+    address: string;
+    contractName: string;
+  }
+
+  interface ContractInstance {
+    address: string;
+    contractName: string;
   }
 
   interface ContractNew<ARGs extends any[]> {
