@@ -8,7 +8,7 @@
     "ethereum",
     "smartcontract"
   ],
-  "version": "1.0.4",
+  "version": "1.0.5",
   "repository": "git@github.com:ethereum-ts/truffle-typings.git",
   "author": "Krzysztof Kaczor <chris@kaczor.io>",
   "license": "MIT",
