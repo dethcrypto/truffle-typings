@@ -52,6 +52,7 @@ declare namespace Truffle {
 
   interface ContractInstance {
     address: string;
+    transactionHash: string;
   }
 
   interface ContractNew<ARGs extends any[]> {
