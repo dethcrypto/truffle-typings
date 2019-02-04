@@ -3,14 +3,18 @@
  */
 /// <reference types="chai" />
 /// <reference types="mocha" />
+
+declare type BN = import("bn.js");
+declare type Web3 = import("web3");
+
 declare const assert: Chai.AssertStatic;
 declare const expect: Chai.ExpectStatic;
+
+declare const web3: Web3;
 
 declare function contract(name: string, test: (accounts: Truffle.Accounts) => void): void;
 
 declare const artifacts: Truffle.Artifacts;
-
-declare const web3: any;
 
 /**
  * Namespace
@@ -19,10 +23,10 @@ declare namespace Truffle {
   type Accounts = string[];
 
   interface TransactionDetails {
-    from: string;
-    gas?: number | string;
-    gasPrice?: number | string;
-    value?: number | string;
+    from?: string;
+    gas?: BN | number | string;
+    gasPrice?: BN | number | string;
+    value?: BN | string;
   }
 
   export interface TransactionLog {
