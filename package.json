@@ -14,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "@types/chai": "^4.1.4",
-    "@types/mocha": "^5.2.5"
+    "@types/mocha": "^5.2.5",
+    "@types/web3": "^1.0.18"
   },
   "types": "./index.d.ts"
 }
