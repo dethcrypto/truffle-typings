@@ -12,9 +12,26 @@ declare const expect: Chai.ExpectStatic;
 
 declare const web3: Web3;
 
-declare function contract(name: string, test: (accounts: Truffle.Accounts) => void): void;
-
 declare const artifacts: Truffle.Artifacts;
+
+/**
+ * Global contract function
+ */
+interface ContractFunction extends Mocha.SuiteFunction {
+  (title: string, fn: (this: Mocha.Suite, accounts: Truffle.Accounts) => void): Mocha.Suite;
+  only: ExclusiveContractFunction;
+  skip: PendingContractFunction;
+}
+
+interface ExclusiveContractFunction extends Mocha.ExclusiveSuiteFunction {
+  (title: string, fn: (this: Mocha.Suite, accounts: Truffle.Accounts) => void): Mocha.Suite;
+}
+
+interface PendingContractFunction extends Mocha.PendingSuiteFunction {
+  (title: string, fn: (this: Mocha.Suite, accounts: Truffle.Accounts) => void): Mocha.Suite | void;
+}
+
+declare const contract: ContractFunction;
 
 /**
  * Namespace
