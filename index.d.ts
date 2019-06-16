@@ -73,6 +73,7 @@ declare namespace Truffle {
 
   interface ContractInstance {
     address: string;
+    contract: any;
     transactionHash: string;
   }
 
